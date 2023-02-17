@@ -15,26 +15,33 @@ func FarhenheitToCelsius(value float64) float64 {
 	// Du skal ikke formattere float64 i denne funksjonen
 	// Gjør formattering i main.go med fmt.Printf eller
 	// lignende
-	return (value - 32) * (5.0 / 9.0)
+
+	celsius := (value - 32) * (5.00 / 9.00)
+	return celsius
 }
 
 // De andre konverteringsfunksjonene implementere her
 func CelsiusToFahrenheit(value float64) float64 {
-	return (value * 9.0 / 5.0) + 32
+	fahrenheit := (value * 9.00 / 5.00) + 32
+	return fahrenheit
 }
 
-func CelsiustoKelvin(value float64) float64 {
-	return (value + 273.15)
+func CelsiusToKelvin(value float64) float64 {
+	kelvin := (value + 273.15)
+	return kelvin
 }
 
-func KelvintoCelsius(value float64) float64 {
-	return (value - 273.15)
+func KelvinToCelsius(value float64) float64 {
+	celsius1 := (value - 273.15)
+	return celsius1
 }
 
-func FahrenheittoKelvin(value float64) float64 {
-	return (value-32)*(5.0/9.0) + 273.15
+func FahrenheitToKelvin(value float64) float64 {
+	kelvin1 := (value-32)*(5.00/9.00) + 273.15
+	return kelvin1
 }
 
-func KelvintoFahrenheit(value float64) float64 {
-	return (value-273.15)*(9.0/5.0) + 32
+func KelvinToFahrenheit(value float64) float64 {
+	fahrenheit1 := (value-273.15)*(9.00/5.00) + 32
+	return fahrenheit1
 }
