@@ -24,6 +24,7 @@ func FarhenheitToCelsius(value float64) float64 {
 func CelsiusToFahrenheit(value float64) float64 {
 	fahrenheit := (value * 9.00 / 5.00) + 32
 	return fahrenheit
+
 }
 
 func CelsiusToKelvin(value float64) float64 {

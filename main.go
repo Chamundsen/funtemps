@@ -13,7 +13,7 @@ var kel float64
 var out string
 var funfacts string
 
-func printTemperatures() {
+func format() {
 	// ...
 	fahrenheitFloat := 134.0
 	celsius := conv.FarhenheitToCelsius(fahrenheitFloat)
@@ -63,7 +63,6 @@ func init() {
 
 func main() {
 	flag.Parse()
-	printTemperatures()
 
 	if isFlagPassed("F") && out == "C" {
 		celsius := conv.FarhenheitToCelsius(fahr)
@@ -75,13 +74,13 @@ func main() {
 		fahrenheit := conv.CelsiusToFahrenheit(cel)
 		fmt.Printf("C: %.2f til F: %.2f\n", cel, fahrenheit)
 	} else if isFlagPassed("C") && out == "K" {
-		kelvin := conv.CelsiusToFahrenheit(cel)
+		kelvin := conv.CelsiusToKelvin(cel)
 		fmt.Printf("C: %.2f til K: %.2f\n", cel, kelvin)
 	} else if isFlagPassed("K") && out == "C" {
-		celsius := conv.CelsiusToFahrenheit(kel)
+		celsius := conv.KelvinToCelsius(kel)
 		fmt.Printf("K: %.2f til C: %.2f\n", kel, celsius)
 	} else if isFlagPassed("K") && out == "F" {
-		fahrenheit := conv.CelsiusToFahrenheit(kel)
+		fahrenheit := conv.KelvinToFahrenheit(kel)
 		fmt.Printf("K: %.2f til F: %.2f\n", kel, fahrenheit)
 	} else {
 		fmt.Println("Noe gikk galt")

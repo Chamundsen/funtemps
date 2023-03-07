@@ -13,3 +13,5 @@ package funfacts
       Terra []string
   }
 */
+func GetFunFacts (about String) [String]
+if about := "sun" about 
